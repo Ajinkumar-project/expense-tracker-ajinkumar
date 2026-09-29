@@ -131,6 +131,11 @@ svg {
   background: var(--text-muted);
 }
 
+/* Utilities */
+.hidden {
+  display: none !important;
+}
+
 /* ============================================================
    LAYOUT
    ============================================================ */
@@ -908,6 +913,10 @@ svg {
   text-align: center;
   padding: 48px 20px;
   color: var(--text-secondary);
+}
+
+.empty-state.hidden {
+  display: none !important;
 }
 
 .empty-icon {
