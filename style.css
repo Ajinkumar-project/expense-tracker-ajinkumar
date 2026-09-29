@@ -50,6 +50,7 @@
   --shadow-accent: 0 8px 24px rgba(99, 102, 241, 0.3);
   --shadow-green: 0 8px 24px rgba(16, 185, 129, 0.25);
   --shadow-red: 0 8px 24px rgba(244, 63, 94, 0.25);
+  --shadow-amber: 0 8px 24px rgba(245, 158, 11, 0.25);
 
   /* Shape */
   --r-xs: 6px;
@@ -405,6 +406,10 @@ svg {
   border-color: var(--border-light);
 }
 
+.summary-card.savings:hover {
+  box-shadow: var(--shadow-amber);
+}
+
 .summary-card.balance:hover {
   box-shadow: var(--shadow-accent);
 }
@@ -603,7 +608,6 @@ svg {
   color: var(--red);
 }
 
-.monthly-progress {}
 
 .progress-label {
   display: flex;
@@ -779,7 +783,8 @@ svg {
   flex-shrink: 0;
 }
 
-.txn-item:hover .txn-actions {
+.txn-item:hover .txn-actions,
+.txn-item:focus-within .txn-actions {
   opacity: 1;
 }
 

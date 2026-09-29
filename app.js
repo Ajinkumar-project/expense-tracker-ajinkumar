@@ -414,7 +414,7 @@ function renderDashboard() {
 
   // Recent (last 5)
   const recent = [...transactions].sort((a,b) => b.createdAt - a.createdAt).slice(0, 5);
-  renderTransactionItems(document.getElementById('recent-list'), recent, true);
+  renderTransactionItems(document.getElementById('recent-list'), recent, false);
 
   // Dashboard donut
   renderDashDonut();
@@ -490,7 +490,7 @@ function renderTransactions() {
   populateCategoryFilterDropdown();
 }
 
-function renderTransactionItems(container, txns, readonly) {
+function renderTransactionItems(container, txns, readonly = false) {
   if (!txns.length) {
     container.innerHTML = `
       <div class="empty-state">
